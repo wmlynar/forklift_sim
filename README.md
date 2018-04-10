@@ -10,7 +10,8 @@ git clone https://github.com/carlosjoserg/rrbot
 git clone https://github.com/ghliu/pyReedsShepp
 cd pyReedsShepp
 sudo python setup.py install
-cd ..
+cd ../..
+sudo easy_install pip
 sudo pip install shapely
 #sudo apt-get install libompl-dev
 sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control ros-kinetic-ros-controllers
@@ -19,6 +20,8 @@ source devel/setup.bash
 ```
 
 # Running instructions
+
+Execute one-by-one, not all at the same time, wait for gazebo to initialize (it may take some time)
 
 ```
 roslaunch forklift_gazebo forklift_world.launch
