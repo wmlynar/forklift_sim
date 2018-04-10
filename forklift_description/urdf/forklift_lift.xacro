@@ -28,9 +28,21 @@
     </collision>    
 
     <visual>
-      <origin xyz="-0.89856 0 0" rpy="0 0 ${PI/2}"/>
+      <origin xyz="0.55 0 0.695" rpy="0 0 0"/>
       <geometry>
-       <mesh filename="package://forklift_description/meshes/forklift_lift1.dae"/>
+       <box size="0.1 1.2 1.25"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.2 0.32 0.06" rpy="0 0 0"/>
+      <geometry>
+       <box size="1.2 0.13 0.03"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="1.2 -0.32 0.06" rpy="0 0 0"/>
+      <geometry>
+       <box size="1.2 0.13 0.03"/>
       </geometry>
     </visual>
 
@@ -58,9 +70,9 @@
     </collision>  
 
     <visual>
-      <origin xyz="-0.89856 0 0" rpy="0 0 ${PI/2}"/>
+      <origin xyz="0.25 0 1.05" rpy="0 0 0"/>
       <geometry>
-       <mesh filename="package://forklift_description/meshes/forklift_lift2.dae"/>
+       <box size="0.3 0.7 2"/>
       </geometry>
     </visual>
 

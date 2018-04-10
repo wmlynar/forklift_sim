@@ -18,9 +18,9 @@
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 ${PI+PI/2}"/>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
       <geometry>
-       <mesh filename="package://forklift_description/meshes/forklift_wheel_front.dae"/>
+       <cylinder radius="${wheelF_radius}" length="${wheelF_width}" />
       </geometry>
     </visual>
 
@@ -48,9 +48,9 @@
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 ${PI/2}"/>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
       <geometry>
-       <mesh filename="package://forklift_description/meshes/forklift_wheel_front.dae"/>
+       <cylinder radius="${wheelF_radius}" length="${wheelF_width}" />
       </geometry>
     </visual>
 

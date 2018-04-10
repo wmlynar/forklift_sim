@@ -47,9 +47,9 @@
     </collision>
 
     <visual>
-      <origin xyz="-0.89856 0 1.08726" rpy="0 0 ${PI/2}"/> <!-- -0.00203 -0.06282 1.08726-->
+      <origin xyz="-1 0 ${height/2 + 0.2}" rpy="0 0 0"/>
       <geometry>
-	     <mesh filename="package://forklift_description/meshes/forklift_body.dae"/>
+             <box size="${length} ${width} ${height}"/>
       </geometry>
     </visual>
 
