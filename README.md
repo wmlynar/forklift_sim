@@ -15,6 +15,7 @@ sudo easy_install pip
 sudo pip install shapely
 #sudo apt-get install libompl-dev
 sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control ros-kinetic-ros-controllers
+rosdep install --from-paths src/forklift_sim --ignore-src --rosdistro=kinetic -y
 catkin_make
 source devel/setup.bash
 ```
@@ -44,4 +45,14 @@ Planning
 rostopic pub /forklift/planner/goal std_msgs/String "data: 'Holding forklift pallet1'"
 rostopic pub /forklift/planner/goal std_msgs/String "data: 'Holding forklift None'"
 rostopic pub /forklift/planner/goal std_msgs/String "data: 'On pallet1 S3'"
+```
+
+# Development
+
+Generating Eclipse project files
+
+```
+catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
+awk -f $(rospack find mk)/eclipse.awk build/.project > build/.project_with_env && mv build/.project_with_env build/.project
+python $(rospack find mk)/make_pydev_project.py
 ```
